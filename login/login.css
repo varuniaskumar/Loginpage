@@ -1,0 +1,140 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-image: url(./assets/images/16504.jpg);
+}
+.login-box{
+    position: relative;
+    width: 450px;
+    height: 600px;
+    background: transparent;
+    border-radius: 10px;
+    border: 2px solid rgba(red, green, blue, alpha);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px  8px 0 rgba(0,0,0,0.2);
+    backdrop-filter: blur(8px);
+    animation: move is ;
+
+}
+@keyframes move{
+    50% {opacity: 0;}
+}
+h2{
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+}
+
+.input-box{
+    position: relative;
+    width: 310px;
+    margin:30px;
+    border-bottom: 1px solid #fff;
+}
+
+.input-box label{
+    position: absolute;
+    top:10%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -5px;
+}
+
+.input-box input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #fff;
+    padding: 0 35px 0 5px;
+}
+.input-box select{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #fff;
+    padding: 0 35px 0 5px ;
+}
+.input-box option{
+    color: #fff;
+    background: purple;
+}
+.remember-forgot{
+    margin: -15px 0 15px;
+    font-size: 1em;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot label input{
+    margin-right: 3px;
+}
+.remember-forgot a{
+    color: #fff;
+    text-decoration: underline;
+
+}
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+
+.button{
+    width: 100%;
+    height: 40px;
+    background-color: blue;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    text-align: center;
+    font-weight: 500;
+}
+.register-link{
+    font-size: 1em;
+    color: #fff;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+.register-link p a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+.register-link p a:hover{
+    text-decoration: underline;
+}
+@media (max-width:500px){
+    .login-box{
+        width: 100%;
+        height: 100vh;
+        border: none;
+        border-radius: 0;
+    }
+}
